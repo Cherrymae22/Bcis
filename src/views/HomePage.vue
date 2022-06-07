@@ -104,7 +104,7 @@
         </body>
 
         <div class="mt-10 text-center">
-            <ion-label class="lg:text-6xl lg:text-teal-300"
+            <ion-label class="lg:text-6xl text-2xl lg:text-teal-300 text-black"
               >How can we help you?</ion-label
             >
           </div>
