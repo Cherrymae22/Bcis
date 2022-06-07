@@ -17,26 +17,25 @@
                     p-4
                     mt-2
                   "
-                  @click="navToggle=!navToggle"
                 >
                   <span class="w-5 h-px mb-1 bg-amber-500"></span>
                   <span class="w-5 h-px mb-1 bg-amber-500"></span>
                   <span class="w-5 h-px mb-1 bg-amber-500"></span>
                 </button>
-                <nav class="lg:hidden md:flex text-md lg:bg-none bg-white border border-black z-20" :class="[navToggle?'block':'hidden']">
+                <nav class="hidden md:flex text-md">
                   <a
                     @click="gthome"
-                    class="text-gray-800 hover:text-teal-400 py-3 px-6 lg:flex block"
-                    >Homes</a
+                    class="text-gray-800 hover:text-teal-400 py-3 px-6"
+                    >Home</a
                   >
                   <a
                     @click="gttrackcert"
-                    class="text-gray-800 hover:text-teal-400 py-3 px-6 lg:flex block"
+                    class="text-gray-800 hover:text-teal-400 py-3 px-6"
                     >Appointment</a
                   >
                   <a
                     @click="gtreqcert"
-                    class="text-gray-800 hover:text-teal-400 py-3 px-6 lg:flex block"
+                    class="text-gray-800 hover:text-teal-400 py-3 px-6"
                     >Schedule an Appointment</a
                   >
                   <a
@@ -70,47 +69,22 @@
             </header>
           </div>
         </div>
-
- <div class="z-index">
-          
-        <div class="container mx-auto px-8 mt-10">
+        <body class="container mx-auto px-8 mt-10">
           <div class="float-left text-left">
-            <label class="lg:text-5xl text-xl text-amber-400 indent-0.5 block"
-              >WELCOME!</label
-            >
-            <text
-              class="
-                lg:text-4xl
-                text-gray-700
-                font-bold
-                uppercase
-                indent-0.5
-                mt-1
-                border-b border-teal-400
-                ml-1
-                block
-              "
-              >{{ residentname }}</text
-            >
-
-            <text class="text-lg text-stone-400 uppercase indent-0.5 mt-2 ml-2">
+            <label class="lg:text-5xl text-xl text-amber-400 indent-0.5 block">WELCOME!</label>
+            <text class="lg:text-4xl text-gray-700 font-bold uppercase indent-0.5 mt-1 border-b border-teal-400 ml-1 block">{{ residentname }}</text>
+           
+           
+              <text class="text-lg text-stone-400 uppercase indent-0.5 mt-2 ml-2">
               {{ purok }}
             </text>
-            <label class="lg:text-5xl font-bold ml-1 text-amber-400 mt-3 block"
-              >BARANGAY PANALIWAD-ON,</label
-            >
-            <label class="lg:text-5xl font-bold ml-1 text-amber-400"
-              >SALVADOR,</label
-            >
-            <label class="lg:text-5xl font-bold ml-1 text-teal-400 block"
-              >LANAO DEL NORTE</label
-            >
-            <label class="lg:text-2xl text-gray-500 ml-1 mb-5 block"
-              >We're here to serve you in a fast, safe, and easy way</label
-            >
+            <label class="lg:text-5xl font-bold ml-1 text-amber-400 mt-3 block">BARANGAY PANALIWAD-ON,</label>
+            <label class="lg:text-5xl font-bold ml-1 text-amber-400">SALVADOR,</label>
+            <label class="lg:text-5xl font-bold ml-1 text-teal-400 block">LANAO DEL NORTE</label>
+            <label class="lg:text-2xl text-gray-500 ml-1 mb-5 block">We're here to serve you in a fast, safe, and easy way</label>
             <a
               @click="gtabout"
-              class="
+              class=" 
                 text-white
                 sm:font-xl
                 uppercase
@@ -127,78 +101,59 @@
               >About Us</a
             >
           </div>
-        </div>
+        </body>
 
         <div class="mt-10 text-center">
-          <ion-label class="lg:text-6xl lg:text-teal-300"
-            >How can we help you?</ion-label
-          >
-        </div>
-        <div class="lg:flex justify-evenly block my-10">
-          <div class="px-2 py-2 rounded bg-white hover:bg-gray-300">
-            <a @click="gtreqcert">
-              <div class="lg:w-52 h-52">
-                <img
-                  class="scale-75 mx-auto w-52 h-52"
-                  src="../assets/images/requestcert.png"
-                />
-              </div>
-              <label
-                class="
-                  text-xl text-teal-400
-                  font-bold
-                  block
-                  text-center
-                  uppercase
-                "
-                >Request Certificate</label
-              >
-            </a>
+            <ion-label class="lg:text-6xl lg:text-teal-300"
+              >How can we help you?</ion-label
+            >
           </div>
+          <div class="lg:flex justify-evenly block my-10">
+            <div class="px-2 py-2 rounded bg-white hover:bg-gray-300">
+              <a @click="gtreqcert">
+                <div class="lg:w-52 h-52">
+                  <img
+                    class="scale-75 mx-auto w-52 h-52"
+                    src="../assets/images/requestcert.png"
+                  />
+                </div>
+                <label
+                  class="text-xl text-teal-400 font-bold block text-center uppercase"
+                  >Request Certificate</label
+                >
+              </a>
+            </div>
 
-          <div class="px-2 py-2 rounded bg-white hover:bg-gray-300">
-            <a @click="gttrackcert">
-              <div class="lg:w-52 h-52">
-                <img
-                  class="scale-95 mx-auto w-52 h-52"
-                  src="../assets/images/trackcert.png"
-                />
-              </div>
-              <label
-                class="
-                  text-lg text-teal-400
-                  font-bold
-                  block
-                  text-center
-                  uppercase
-                "
-                >Track your Certificate</label
-              >
-            </a>
-          </div>
+            <div class="px-2 py-2 rounded bg-white hover:bg-gray-300">
+              <a @click="gttrackcert">
+                <div class="lg:w-52 h-52">
+                  <img
+                    class="scale-95 mx-auto w-52 h-52"
+                    src="../assets/images/trackcert.png"
+                  />
+                </div>
+                <label
+                  class="text-lg text-teal-400 font-bold block text-center uppercase"
+                  >Track your Certificate</label
+                >
+              </a>
+            </div>
 
-          <div class="px-2 py-2 rounded bg-white hover:bg-gray-300">
-            <a @click="gteditprofile">
-              <div class="lg:w-52 h-52">
-                <img
-                  class="scale-75 mx-auto w-52 h-52"
-                  src="../assets/images/editprofile.png"
-                />
-              </div>
-              <label
-                class="
-                  text-lg text-teal-400
-                  font-bold
-                  block
-                  text-center
-                  uppercase
-                "
-                >Edit Profile</label
-              >
-            </a>
+            <div class="px-2 py-2 rounded bg-white hover:bg-gray-300">
+              <a @click="gteditprofile">
+                <div class="lg:w-52 h-52">
+                  <img
+                    class="scale-75 mx-auto w-52 h-52"
+                    src="../assets/images/editprofile.png"
+                  />
+                </div>
+                <label
+                  class="text-lg text-teal-400 font-bold block text-center uppercase"
+                  >Edit Profile</label
+                >
+              </a>
+            </div>
           </div>
-        </div>
- </div>
       </div>
     </div>
   </main>
@@ -215,7 +170,6 @@ export default {
       purok: null,
       residentname: null,
       userID: "",
-      navToggle:false,
     };
   },
   mounted() {
@@ -303,9 +257,6 @@ body {
   background-image: url(../assets/images/landing.png);
   background-repeat: no-repeat;
   background-position: right;
-}
-.z-index{
-  z-index:-1;
 }
 @media only screen and (max-width: 1023px) {
   body {
