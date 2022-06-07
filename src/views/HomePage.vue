@@ -27,7 +27,7 @@
                   <a
                     @click="gthome"
                     class="text-gray-800 hover:text-teal-400 py-3 px-6 lg:flex block"
-                    >Home</a
+                    >Homes</a
                   >
                   <a
                     @click="gttrackcert"
